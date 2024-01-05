@@ -37,23 +37,14 @@ Ensure you have a device connected or an emulator running.
 ### Features
 
 1. Trending Movies
-Stay up-to-date with the latest movie trends. NepFlix showcases the hottest and most popular movies currently making waves in the entertainment industry.
-
    - Stay up-to-date with the latest movie trends. NepFlix showcases the hottest and most popular movies currently making waves in the entertainment industry.
 2. Top Rated Movies
-Discover critically acclaimed movies that have received high ratings from both audiences and critics. Explore a curated list of top-rated films for an exceptional cinematic experience.
-
    - Discover critically acclaimed movies that have received high ratings from both audiences and critics. Explore a curated list of top-rated films for an exceptional cinematic experience.
 3. Popular TV Shows
-Explore the world of television with NepFlix's collection of popular TV shows. From thrilling dramas to hilarious comedies, there's something for every TV enthusiast.
-
    - Explore the world of television with NepFlix's collection of popular TV shows. From thrilling dramas to hilarious comedies, there's something for every TV enthusiast.
 4. Upcoming Movies
-Get a sneak peek into the future of cinema. NepFlix provides information about upcoming movie releases, allowing users to plan their entertainment schedule in advance.
-
    - Get a sneak peek into the future of cinema. NepFlix provides information about upcoming movie releases, allowing users to plan their entertainment schedule in advance.
 5. Movie and TV Show Descriptions
-Detailed descriptions for each movie and TV show provide users with essential information, including plot summaries, cast details, and genre categorization. Make informed decisions about what to watch next.
    - Detailed descriptions for each movie and TV show provide users with essential information, including plot summaries, cast details, and genre categorization. Make informed decisions about what to watch next.
 
 ## Screenshots
