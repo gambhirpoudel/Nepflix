@@ -5,7 +5,9 @@ import 'package:nepflix/components/description.dart';
 class TopRatedMovies extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
   final toprated;
-  const TopRatedMovies({super.key, this.toprated});
+  // ignore: prefer_typing_uninitialized_variables
+  final credit;
+  const TopRatedMovies({super.key, this.toprated, this.credit});
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +43,10 @@ class TopRatedMovies extends StatelessWidget {
                                     description: toprated[index]['overview'],
                                     vote: toprated[index]['vote_average']
                                         .toString(),
+                                    creditBannerurl:
+                                        // ignore: prefer_interpolation_to_compose_strings
+                                        'https://image.tmdb.org/t/p/w500/' +
+                                            credit[index]['profile_path'],
                                     launchon: toprated[index]
                                             ['first_air_date'] ??
                                         toprated[index]['release_date']

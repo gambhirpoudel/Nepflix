@@ -5,7 +5,9 @@ import 'package:nepflix/utils/fonts.dart';
 class Upcoming extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
   final upcoming;
-  const Upcoming({super.key, this.upcoming});
+  // ignore: prefer_typing_uninitialized_variables
+  final credit;
+  const Upcoming({super.key, this.upcoming, this.credit});
 
   @override
   Widget build(BuildContext context) {
@@ -41,6 +43,10 @@ class Upcoming extends StatelessWidget {
                                     description: upcoming[index]['overview'],
                                     vote: upcoming[index]['vote_average']
                                         .toString(),
+                                    creditBannerurl:
+                                        // ignore: prefer_interpolation_to_compose_strings
+                                        'https://image.tmdb.org/t/p/w500/' +
+                                            credit[index]['profile_path'],
                                     launchon: upcoming[index]
                                             ['first_air_date'] ??
                                         upcoming[index]['release_date']

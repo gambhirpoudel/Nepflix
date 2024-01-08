@@ -5,7 +5,9 @@ import 'package:nepflix/components/description.dart';
 class PopularTV extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
   final tv;
-  const PopularTV({super.key, this.tv});
+  // ignore: prefer_typing_uninitialized_variables
+  final credit;
+  const PopularTV({super.key, this.tv, this.credit});
 
   @override
   Widget build(BuildContext context) {
@@ -29,7 +31,7 @@ class PopularTV extends StatelessWidget {
                           MaterialPageRoute(
                               builder: (context) => Description(
                                     name:
-                                        tv[index]['title'] ?? tv[index]['name'],
+                                        tv[index]["title"] ?? tv[index]['name'],
                                     bannerurl:
                                         // ignore: prefer_interpolation_to_compose_strings
                                         'https://image.tmdb.org/t/p/w500' +
@@ -40,6 +42,10 @@ class PopularTV extends StatelessWidget {
                                             tv[index]['poster_path'],
                                     description: tv[index]['overview'],
                                     vote: tv[index]['vote_average'].toString(),
+                                    creditBannerurl:
+                                        // ignore: prefer_interpolation_to_compose_strings
+                                        'https://image.tmdb.org/t/p/w500/' +
+                                            credit[index]['profile_path'],
                                     launchon: tv[index]['first_air_date'] ??
                                         tv[index]['release_date'].toString(),
                                   )));

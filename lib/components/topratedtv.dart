@@ -5,7 +5,9 @@ import 'package:nepflix/components/description.dart';
 class TopRatedTV extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
   final topratedtv;
-  const TopRatedTV({super.key, this.topratedtv});
+  // ignore: prefer_typing_uninitialized_variables
+  final credit;
+  const TopRatedTV({super.key, this.topratedtv, this.credit});
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,7 @@ class TopRatedTV extends StatelessWidget {
                               builder: (context) => Description(
                                     name: topratedtv[index]['title'] ??
                                         topratedtv[index]['name'],
+                                  
                                     bannerurl:
                                         // ignore: prefer_interpolation_to_compose_strings
                                         'https://image.tmdb.org/t/p/w500' +
@@ -41,6 +44,10 @@ class TopRatedTV extends StatelessWidget {
                                     description: topratedtv[index]['overview'],
                                     vote: topratedtv[index]['vote_average']
                                         .toString(),
+                                    creditBannerurl:
+                                        // ignore: prefer_interpolation_to_compose_strings
+                                        'https://api.themoviedb.org/3/tv/credits/' +
+                                            credit[index]['profile_path'],
                                     launchon: topratedtv[index]
                                             ['first_air_date'] ??
                                         topratedtv[index]['release_date']

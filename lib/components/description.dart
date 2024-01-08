@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:nepflix/utils/fonts.dart';
 
 class Description extends StatelessWidget {
-  final String name, description, posterurl, vote, bannerurl, launchon;
+  final String name,
+      description,
+      posterurl,
+      vote,
+      bannerurl,
+      creditBannerurl,
+      launchon;
+
   const Description({
     super.key,
     required this.name,
@@ -11,6 +18,7 @@ class Description extends StatelessWidget {
     required this.vote,
     required this.bannerurl,
     required this.launchon,
+    required this.creditBannerurl,
   });
 
   @override
@@ -66,6 +74,27 @@ class Description extends StatelessWidget {
               ))
             ],
           ),
+          SizedBox(
+            height: 100,
+            child: ListView.builder(
+              itemCount: creditBannerurl.length,
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context, index) {
+                String imageURL = creditBannerurl;
+
+                return Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: CircleAvatar(
+                    radius: 40,
+                    backgroundImage: NetworkImage(imageURL),
+                  ),
+                );
+              },
+            ),
+          )
+          // Container(
+          //   child: ModifiedText(text: credit, size: 15, color: Colors.red),
+          // ),
         ],
       ),
     );

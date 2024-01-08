@@ -5,7 +5,9 @@ import 'package:nepflix/utils/fonts.dart';
 class TrendingMovies extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
   final trending;
-  const TrendingMovies({super.key, this.trending});
+  // ignore: prefer_typing_uninitialized_variables
+  final credit;
+  const TrendingMovies({super.key, this.trending, this.credit});
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +32,7 @@ class TrendingMovies extends StatelessWidget {
                               builder: (context) => Description(
                                     name: trending[index]['title'] ??
                                         trending[index]['name'],
+                                    
                                     bannerurl:
                                         // ignore: prefer_interpolation_to_compose_strings
                                         'https://image.tmdb.org/t/p/w500' +
@@ -41,6 +44,11 @@ class TrendingMovies extends StatelessWidget {
                                     description: trending[index]['overview'],
                                     vote: trending[index]['vote_average']
                                         .toString(),
+                                       
+                                    creditBannerurl:
+                                        // ignore: prefer_interpolation_to_compose_strings
+                                        'https://image.tmdb.org/t/p/w500/' +
+                                            credit[index]['profile_path'],
                                     launchon: trending[index]
                                             ['first_air_date'] ??
                                         trending[index]['release_date']
