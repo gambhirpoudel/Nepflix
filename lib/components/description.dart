@@ -2,24 +2,21 @@ import 'package:flutter/material.dart';
 import 'package:nepflix/utils/fonts.dart';
 
 class Description extends StatelessWidget {
-  final String name,
-      description,
-      posterurl,
-      vote,
-      bannerurl,
-      creditBannerurl,
-      launchon;
+  final String name, description, posterurl, vote, bannerurl, launchon;
+  final List<String> castImages, character;
 
   const Description({
-    super.key,
+    Key? key,
     required this.name,
     required this.description,
     required this.posterurl,
     required this.vote,
     required this.bannerurl,
     required this.launchon,
-    required this.creditBannerurl,
-  });
+    required this.castImages,
+    required this.character,
+    movieId,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -32,20 +29,23 @@ class Description extends StatelessWidget {
             child: Stack(
               children: [
                 Positioned(
-                    child: SizedBox(
-                  height: 250,
-                  width: MediaQuery.of(context).size.width,
-                  child: Image.network(
-                    bannerurl,
-                    fit: BoxFit.cover,
+                  child: SizedBox(
+                    height: 250,
+                    width: MediaQuery.of(context).size.width,
+                    child: Image.network(
+                      bannerurl,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                )),
+                ),
                 Positioned(
-                    bottom: 10,
-                    child: ModifiedText(
-                        text: '⭐ Average Rating - $vote',
-                        size: 18,
-                        color: Colors.white))
+                  bottom: 10,
+                  child: ModifiedText(
+                    text: '⭐ Average Rating - $vote',
+                    size: 18,
+                    color: Colors.white,
+                  ),
+                ),
               ],
             ),
           ),
@@ -57,44 +57,60 @@ class Description extends StatelessWidget {
           Container(
             padding: const EdgeInsets.only(left: 10),
             child: ModifiedText(
-                // ignore: prefer_interpolation_to_compose_strings
-                text: 'Released On - ' + launchon,
-                size: 15,
-                color: Colors.white),
+              text: 'Released On - $launchon',
+              size: 15,
+              color: Colors.white,
+            ),
           ),
           Row(
             children: [
               SizedBox(
-                  height: 200, width: 100, child: Image.network(posterurl)),
+                height: 200,
+                width: 100,
+                child: Image.network(posterurl),
+              ),
               Flexible(
-                  child: Container(
-                margin: const EdgeInsets.only(left: 10),
-                child: ModifiedText(
-                    text: description, size: 14, color: Colors.white),
-              ))
+                child: Container(
+                  margin: const EdgeInsets.only(left: 10),
+                  child: ModifiedText(
+                    text: description,
+                    size: 14,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
             ],
           ),
           SizedBox(
-            height: 100,
+            height: 200,
             child: ListView.builder(
-              itemCount: creditBannerurl.length,
+              itemCount: castImages.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
-                String imageURL = creditBannerurl;
+                String imageURL = castImages[index];
 
                 return Padding(
                   padding: const EdgeInsets.all(8.0),
-                  child: CircleAvatar(
-                    radius: 40,
-                    backgroundImage: NetworkImage(imageURL),
+                  child: Column(
+                    children: [
+                      CircleAvatar(
+                        radius: 40,
+                        backgroundImage: NetworkImage(imageURL),
+                      ),
+                      SizedBox(
+                        height: 100,
+                        child: Text(
+                          character[index],
+                          style: const TextStyle(
+                              fontSize: 12, color: Colors.white),
+                        ),
+                      ),
+                    ],
                   ),
                 );
               },
             ),
-          )
-          // Container(
-          //   child: ModifiedText(text: credit, size: 15, color: Colors.red),
-          // ),
+          ),
         ],
       ),
     );

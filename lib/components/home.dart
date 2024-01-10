@@ -39,13 +39,11 @@ class _HomeState extends State<Home> {
 
     Map trendingresults = await tmdbWithCustomLogs.v3.trending.getTrending();
     Map topratedresults = await tmdbWithCustomLogs.v3.movies.getTopRated();
-    int movieId = trendingresults['results'][0]['id'];
-    Map creditresults = await tmdbWithCustomLogs.v3.movies.getCredits(movieId);
-    int tvId = trendingresults['results'][0]['id'];
-    Map credittvresults = await tmdbWithCustomLogs.v3.tv.getCredits(tvId);
-    // print(credittvresults);
     Map upcomingresults = await tmdbWithCustomLogs.v3.movies.getUpcoming();
     Map tvresults = await tmdbWithCustomLogs.v3.tv.getPopular();
+    // int movieId = 753342;
+    // Map moviecredit = await tmdbWithCustomLogs.v3.movies.getCredits(movieId);
+    // print(moviecredit);
     Map topratedtvresults = await tmdbWithCustomLogs.v3.tv.getTopRated();
 
     setState(() {
@@ -53,12 +51,8 @@ class _HomeState extends State<Home> {
       topratedmovies = topratedresults['results'];
       upcomingmovies = upcomingresults['results'];
       tv = tvresults['results'];
-      // print("This is Tv results");
-      // print(tvresults);
-      creditmovie = creditresults['cast'];
-      credittv = credittvresults['cast'];
       topratedtvs = topratedtvresults['results'];
-      print(tv);
+      // print(tv);
     });
     // print(trendingmovies);
   }
@@ -71,23 +65,18 @@ class _HomeState extends State<Home> {
           children: [
             TrendingMovies(
               trending: trendingmovies,
-              credit: creditmovie,
             ),
-            TopRatedMovies(
+            TopRateMovies(
               toprated: topratedmovies,
-              credit: creditmovie,
             ),
             PopularTV(
               tv: tv,
-              credit: credittv,
             ),
-            TopRatedTV(
+            TopRateTV(
               topratedtv: topratedtvs,
-              credit: credittv,
             ),
             Upcoming(
               upcoming: upcomingmovies,
-              credit: creditmovie,
             ),
           ],
         ));
