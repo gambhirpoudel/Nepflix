@@ -72,22 +72,23 @@ class _CreditdetailsState extends State<Creditdetails> {
   @override
   Widget build(BuildContext context) {
     List<String> castImages = [];
-     List<String> character = [];
+    List<String> character = [];
     if (widget.movieId != 0 && creditmovie.isNotEmpty) {
       castImages = creditmovie.map((cast) {
-         character.add(cast['character']);
-        return 'https://image.tmdb.org/t/p/w500${cast['profile_path']}';
+        character.add(cast['character']);
+
+        return cast['profile_path'] != null
+            ? 'https://image.tmdb.org/t/p/w500${cast['profile_path']}'
+            : 'https://cdn.discordapp.com/attachments/1036120891857305661/1194625482486988810/placeholder.jpg';
       }).toList();
     } else if (widget.tvId != 0 && credittv.isNotEmpty) {
       castImages = credittv.map((cast) {
-         character.add(cast['character']);
-        return 'https://image.tmdb.org/t/p/w500${cast['profile_path']}';
+        character.add(cast['character']);
+        return cast['profile_path'] != null
+            ? 'https://image.tmdb.org/t/p/w500${cast['profile_path']}'
+            : 'https://cdn.discordapp.com/attachments/1036120891857305661/1194625482486988810/placeholder.jpg';
       }).toList();
     }
-
-    // if (castImages.isEmpty) {
-    //   castImages = 'https://image.tmdb.org/t/p/w500/placeholder.jpg';
-    // }
 
     return Description(
       name: widget.name,

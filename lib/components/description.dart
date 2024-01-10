@@ -102,7 +102,7 @@ class Description extends StatelessWidget {
                         child: Text(
                           character[index],
                           style: const TextStyle(
-                              fontSize: 12, color: Colors.white),
+                              fontSize: 15, color: Colors.white),
                         ),
                       ),
                     ],

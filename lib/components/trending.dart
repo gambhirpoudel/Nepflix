@@ -20,7 +20,7 @@ class TrendingMovies extends StatelessWidget {
           const ModifiedText(
               text: 'Trending Movies', size: 24, color: Colors.white),
           SizedBox(
-            height: 180,
+            height: 195,
             child: ListView.builder(
               itemCount: trending.length,
               scrollDirection: Axis.horizontal,
