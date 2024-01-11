@@ -2,8 +2,6 @@
 NepFlix is an engaging entertainment application built using Flutter, offering a delightful experience for users to explore and discover a diverse collection of movies and TV shows. With an intuitive interface and powerful features, NepFlix brings the world of entertainment right to your fingertips.
 ## Table of Contents
 - [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
 - [Running the App](#running-the-app)
 - [Features](#features)
 - [Screenshots](#screenshots)
@@ -11,11 +9,11 @@ NepFlix is an engaging entertainment application built using Flutter, offering a
 ## Getting Started
 
 
-2. Navigate to the project directory:
+1. Navigate to the project directory:
    ```bash
    cd Nepflix
    ```
-3. Install dependencies:
+2. Install dependencies:
    ```bash
    flutter pub get
    ```
@@ -49,6 +47,8 @@ Ensure you have a device connected or an emulator running.
 
 ## Screenshots
 
-![Home1](https://media.discordapp.net/attachments/1036120891857305661/1191735027214594048/Screenshot_1704201924.png?ex=65a684bb&is=65940fbb&hm=0f6ac69d3d16c067c01126d59bbaacf372588be0ec243bddda763e5d7242c032&=&format=webp&quality=lossless&width=335&height=669)
-![Home2](https://media.discordapp.net/attachments/1036120891857305661/1191734760473636945/Screenshot_1704201930.png?ex=65a6847c&is=65940f7c&hm=a3c368ed42ad1d92fea0caa51964c731c58bd619ae91d4de88f1445e0d3b84ce&=&format=webp&quality=lossless&width=335&height=669)
-![Description](https://media.discordapp.net/attachments/1036120891857305661/1191734258700669008/Screenshot_1704201947.png?ex=65a68404&is=65940f04&hm=58a5f92aeb0124559e053d80cce36c561fcbcc1dcf08099aaa7f233d5388a29b&=&format=webp&quality=lossless&width=335&height=669)
+![Movies](https://media.discordapp.net/attachments/1036120891857305661/1194974295781277778/Screenshot_1704974409.png?ex=65b24d89&is=659fd889&hm=b8385e2276a340ffa140ba54e9ca817bba80811a03e001ea5f80ed2eef0a5523&=&format=webp&quality=lossless&width=335&height=669)
+![MDes](https://media.discordapp.net/attachments/1036120891857305661/1194974342619086929/Screenshot_1704974417.png?ex=65b24d94&is=659fd894&hm=b941355c5bb90efe48b6e97277984a83012dd69e901881dc39b070e7257f7293&=&format=webp&quality=lossless&width=335&height=669)
+![TVs](https://media.discordapp.net/attachments/1036120891857305661/1194974343210475600/Screenshot_1704974424.png?ex=65b24d94&is=659fd894&hm=d7f1d7f040344954216acf0da6a6ba4090b97861acaaeb26c2e80e5bdab4d938&=&format=webp&quality=lossless&width=335&height=669)
+![TDes](https://media.discordapp.net/attachments/1036120891857305661/1194974366048469073/Screenshot_1704974436.png?ex=65b24d9a&is=659fd89a&hm=072821c09b71e1b98b35024682237eac58f120abbcb8c0ebed4101b188020dcf&=&format=webp&quality=lossless&width=335&height=669)
+
