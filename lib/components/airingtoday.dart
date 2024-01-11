@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:nepflix/components/credit.dart';
 import 'package:nepflix/utils/fonts.dart';
 
-class Upcoming extends StatelessWidget {
+class AiringToday extends StatelessWidget {
   // ignore: prefer_typing_uninitialized_variables
-  final upcoming;
+  final airingtoday;
   // ignore: prefer_typing_uninitialized_variables
   final credit;
   // ignore: use_key_in_widget_constructors
-  const Upcoming({Key? key, this.upcoming, this.credit});
+  const AiringToday({Key? key, this.airingtoday, this.credit});
 
   @override
   Widget build(BuildContext context) {
@@ -18,11 +18,11 @@ class Upcoming extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const ModifiedText(
-              text: 'Upcoming Movies', size: 24, color: Colors.white),
+              text: 'Airing Today', size: 24, color: Colors.white),
           SizedBox(
             height: 180,
             child: ListView.builder(
-              itemCount: upcoming.length,
+              itemCount: airingtoday.length,
               scrollDirection: Axis.horizontal,
               itemBuilder: (context, index) {
                 return InkWell(
@@ -31,22 +31,22 @@ class Upcoming extends StatelessWidget {
                       context,
                       MaterialPageRoute(
                         builder: (context) => Creditdetails(
-                          movieId: upcoming[index]['id'],
-                          name: upcoming[index]['title'] ??
-                              upcoming[index]['name'],
+                          tvId: airingtoday[index]['id'],
+                          name: airingtoday[index]["title"] ??
+                              airingtoday[index]['name'],
+                          movieId: 0,
                           bannerurl:
                               // ignore: prefer_interpolation_to_compose_strings
                               'https://image.tmdb.org/t/p/w500' +
-                                  upcoming[index]['backdrop_path'],
+                                  airingtoday[index]['backdrop_path'],
                           posterurl:
                               // ignore: prefer_interpolation_to_compose_strings
                               'https://image.tmdb.org/t/p/w500' +
-                                  upcoming[index]['poster_path'],
-                          description: upcoming[index]['overview'],
-                          vote: upcoming[index]['vote_average'].toString(),
-                          launchon: upcoming[index]['first_air_date'] ??
-                              upcoming[index]['release_date'].toString(),
-                          tvId: 0,
+                                  airingtoday[index]['poster_path'],
+                          description: airingtoday[index]['overview'],
+                          vote: airingtoday[index]['vote_average'].toString(),
+                          launchon: airingtoday[index]['first_air_date'] ??
+                              airingtoday[index]['release_date'].toString(),
                         ),
                       ),
                     );
@@ -65,7 +65,7 @@ class Upcoming extends StatelessWidget {
                               image: NetworkImage(
                                 // ignore: prefer_interpolation_to_compose_strings
                                 'https://image.tmdb.org/t/p/w500' +
-                                    upcoming[index]['backdrop_path'],
+                                    airingtoday[index]['backdrop_path'],
                               ),
                               fit: BoxFit.cover,
                             ),
@@ -73,8 +73,8 @@ class Upcoming extends StatelessWidget {
                         ),
                         SizedBox(
                           child: ModifiedText(
-                            text: upcoming[index]['title'] ??
-                                upcoming[index]['name'],
+                            text: airingtoday[index]['title'] ??
+                                airingtoday[index]['name'],
                             size: 15,
                             color: Colors.white,
                           ),

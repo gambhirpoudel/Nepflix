@@ -18,7 +18,7 @@ class PopularTV extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const ModifiedText(
-              text: 'Top Rated TV Shows', size: 24, color: Colors.white),
+              text: 'Popular TV Shows', size: 24, color: Colors.white),
           SizedBox(
             height: 180,
             child: ListView.builder(

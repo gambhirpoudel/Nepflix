@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:nepflix/components/home.dart';
+import 'package:nepflix/components/homepage.dart';
+// import 'package:nepflix/components/tvhome.dart';
 
 void main() => runApp(const MyApp());
 
@@ -9,8 +10,9 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        home: const Home(),
-        debugShowCheckedModeBanner: false,
-        theme: ThemeData(brightness: Brightness.dark));
+      home: const HomePage(),
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(brightness: Brightness.dark),
+    );
   }
 }
