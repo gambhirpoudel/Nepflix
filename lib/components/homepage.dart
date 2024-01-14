@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:nepflix/components/moviehome.dart';
 import 'package:nepflix/components/tvhome.dart';
+import 'package:nepflix/components/userprofile.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -15,6 +16,7 @@ class _HomePageState extends State<HomePage> {
   final List<Widget> _screens = <Widget>[
     const MovieHome(),
     const TvHome(),
+    const Profile(),
   ];
 
   void _onItemTap(int index) {
@@ -48,10 +50,10 @@ class _HomePageState extends State<HomePage> {
                 icon: Icons.tv,
                 text: 'TVs',
               ),
-              // GButton(
-              //   icon: Icons.tv,
-              //   text: 'TVs',
-              // ),
+              GButton(
+                icon: Icons.person,
+                text: 'Profile',
+              ),
             ],
             selectedIndex: _selectedIndex,
             onTabChange: _onItemTap,

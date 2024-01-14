@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:nepflix/components/appbar.dart';
-// import 'package:nepflix/components/homepage.dart';
 import 'package:nepflix/utils/fonts.dart';
 
 class Description extends StatelessWidget {
@@ -24,7 +23,6 @@ class Description extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: const CustomAppBar(title: 'Details'),
-        // bottomNavigationBar: const HomePage(),
         backgroundColor: Colors.black,
         body: Padding(
           padding: const EdgeInsets.only(top: 10),

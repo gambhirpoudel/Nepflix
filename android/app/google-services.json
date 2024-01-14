@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "837625825071",
+    "project_id": "nepflix-b066b",
+    "storage_bucket": "nepflix-b066b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:837625825071:android:d9af1a0d5f70ff65fd03da",
+        "android_client_info": {
+          "package_name": "com.example.nepflix"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpubN5OUxyWm4gLFYMas_Z4BWAMS2ZEzs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
