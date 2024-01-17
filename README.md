@@ -25,13 +25,6 @@ Ensure you have a device connected or an emulator running.
    flutter run
   ```
 
-### Usage
-
-- Launch the app.
-- Add a new task by pressing the "+" button.
-- Edit a task by pressing the edit button.
-- Delete a task by pressing the delete button.
-
 ### Features
 
 1. Trending Movies
